@@ -1,20 +1,20 @@
 
-// Get the canvas
+
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
-// Score
+
 const scoreText = document.getElementById("score");
 
-// Buttons
+
 const startBtn = document.getElementById("startBtn");
 const restartBtn = document.getElementById("restartBtn");
 
-// Game settings
+
 const box = 20;
 const rows = canvas.width / box;
 
-// Variables
+
 let snake;
 let food;
 let score;
@@ -41,7 +41,7 @@ function startGame() {
     game = setInterval(drawGame, 120);
 }
 
-// Create food
+
 function createFood(){
 
     food = {
@@ -93,8 +93,8 @@ function drawGame(){
 
     // Wall collision
     if(
-        headX<0 ||
-        headY<0 ||
+        headX<2 ||
+        headY<2 ||
         headX>=rows ||
         headY>=rows
     ){
